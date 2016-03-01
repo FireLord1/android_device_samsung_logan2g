@@ -116,10 +116,6 @@ public class SamsungMint2GRIL extends SamsungSPRDRIL implements CommandsInterfac
             case 1036:
                 ret = responseVoid(p);
                 break;
-            case 11017: // RIL_UNSOL_WB_AMR_STATE:
-                ret = responseInts(p);
-                setWbAmr(((int[])ret)[0]);
-                break;
             default:
                 // Rewind the Parcel
                 p.setDataPosition(dataPosition);
