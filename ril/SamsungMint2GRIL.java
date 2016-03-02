@@ -96,7 +96,20 @@ public class SamsungMint2GRIL extends SamsungSPRDRIL implements CommandsInterfac
         int response = p.readInt();
 
         switch(response) {
-            case RIL_UNSOL_ON_USSD: ret =  responseUSSDStrings(p); break;
+            case RIL_UNSOL_ON_USSD: ret =  responseUSSDStrings(p);
+                String[] resp = (String[])ret;
+
+                if (resp.length < 2) {
+                    resp = new String[2];
+                    resp[0] = ((String[])ret)[0];
+                    resp[1] = null;
+                }
+                if (RILJ_LOGD) unsljLogMore(response, resp[0]);
+                if (mUSSDRegistrant != null) {
+                    mUSSDRegistrant.notifyRegistrant(
+                        new AsyncResult (null, resp, null));
+                }
+            break;
             // SAMSUNG STATES
             case 11010: // RIL_UNSOL_AM:
                 ret = responseString(p);
@@ -127,7 +140,9 @@ public class SamsungMint2GRIL extends SamsungSPRDRIL implements CommandsInterfac
 
     }
     
-       private Object responseUSSDStrings(Parcel p) {
+        
+    private Object responseUSSDStrings(Parcel p) {
+        Rlog.d(RILJ_LOG_TAG, "UNSOL_ON_USSD!");
         String[] response = p.readStringArray();
         if(response.length > 0x2) {
             int num = Integer.parseInt(response[0x2]);
@@ -151,4 +166,6 @@ public class SamsungMint2GRIL extends SamsungSPRDRIL implements CommandsInterfac
         }
         return response;
     }
+    
+
 }
