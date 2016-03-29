@@ -113,7 +113,7 @@ public class SamsungSPRDRIL extends RIL implements CommandsInterface {
         super.notifyRegistrantsRilConnectionChanged(rilVer);
         if (rilVer != -1) {
             if (mInstanceId != null) {
-                // Enable simultaneous data/voice on Multi-SIM
+               riljLog("Enable simultaneous data/voice on Multi-SIM");
                 invokeOemRilRequestSprd((byte) 3, (byte) 1, null);
             } else {
                 // Set data subscription to allow data in either SIM slot when using single SIM mode
