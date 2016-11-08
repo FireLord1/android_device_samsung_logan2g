@@ -7,5 +7,5 @@
 /system         ext4        /dev/block/mmcblk0p9
 /preload        ext4        /dev/block/mmcblk0p10
 /modem2         emmc        /dev/block/mmcblk0p11                          flags=display="Modem2";backup=1
-/data           f2fs        /dev/block/mmcblk0p12   
+/data           f2fs        /dev/block/mmcblk0p12    length=-16384
 /external_sd    vfat        /dev/block/mmcblk1p1     /dev/block/mmcblk1    flags=display="Micro SD";storage;removable
