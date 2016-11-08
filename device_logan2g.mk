@@ -55,12 +55,12 @@ PRODUCT_COPY_FILES += \
 
 # Idc
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/idc/Zinitix_tsp.idc:system/usr/idc/Zinitix_tsp.idc
+    $(LOCAL_PATH)/configs/idc/Zinitix_tsp.idc:system/usr/idc/Zinitix_tsp.idc
 
 # Keylayout
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/keylayouts/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl
+    $(LOCAL_PATH)/configs/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/configs/keylayouts/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -69,17 +69,17 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/default_gain.conf:system/etc/default_gain.conf \
-    $(LOCAL_PATH)/configs/devicevolume.xml:system/etc/devicevolume.xml \
-    $(LOCAL_PATH)/configs/formatvolume.xml:system/etc/formatvolume.xml
+    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/audio/default_gain.conf:system/etc/default_gain.conf \
+    $(LOCAL_PATH)/configs/audio/devicevolume.xml:system/etc/devicevolume.xml \
+    $(LOCAL_PATH)/configs/audio/formatvolume.xml:system/etc/formatvolume.xml
 
 # Hw Params
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio_para:system/etc/audio_para \
-    $(LOCAL_PATH)/configs/codec_pga.xml:system/etc/codec_pga.xml\
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/tiny_hw.xml \
-    $(LOCAL_PATH)/configs/audio_hw.xml:system/etc/audio_hw.xml
+    $(LOCAL_PATH)/configs/audio/audio_para:system/etc/audio_para \
+    $(LOCAL_PATH)/configs/audio/codec_pga.xml:system/etc/codec_pga.xml\
+    $(LOCAL_PATH)/configs/audio/tiny_hw.xml:system/etc/tiny_hw.xml \
+    $(LOCAL_PATH)/configs/audio/audio_hw.xml:system/etc/audio_hw.xml
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
