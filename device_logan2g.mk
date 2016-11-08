@@ -172,7 +172,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mobiledata.interfaces=rmnet0 \
     ro.zygote.disable_gl_preload=true \
     persist.radio.multisim.config=dsds \
-    ro.telephony.ril_class=SamsungSPRDRIL \
     ro.multisim.simslotcount=2 \
     ro.telephony.call_ring.multiple=0 \
     ro.telephony.call_ring=0 \
