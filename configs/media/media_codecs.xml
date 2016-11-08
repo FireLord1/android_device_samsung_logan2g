@@ -77,10 +77,6 @@ Only the three quirks included above are recognized at this point:
 
 <MediaCodecs>
     <Decoders>
-	<MediaCodec name="OMX.PV.mpeg4dec" type="video/mp4v-es" />
-	<MediaCodec name="OMX.PV.h263dec" type="video/3gpp" />
-	<MediaCodec name="OMX.PV.avcdec" type="video/avc" />
-
         <MediaCodec name="OMX.google.mp3.decoder" type="audio/mpeg" />
         <MediaCodec name="OMX.google.amrnb.decoder" type="audio/3gpp" />
         <MediaCodec name="OMX.google.amrwb.decoder" type="audio/amr-wb" />
@@ -89,9 +85,6 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.google.g711.mlaw.decoder" type="audio/g711-mlaw" />
         <MediaCodec name="OMX.google.vorbis.decoder" type="audio/vorbis" />
 
-        <MediaCodec name="OMX.sprd.mpeg4.decoder" type="video/mp4v-es" />
-        <MediaCodec name="OMX.sprd.h263.decoder" type="video/3gpp" />
-        <MediaCodec name="OMX.sprd.h264.decoder" type="video/avc" />
         <MediaCodec name="OMX.google.mpeg4.decoder" type="video/mp4v-es" />
         <MediaCodec name="OMX.google.h263.decoder" type="video/3gpp" />
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc" />
