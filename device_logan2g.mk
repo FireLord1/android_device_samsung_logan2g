@@ -98,12 +98,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     setup_fs \
 
-# f2fs
-PRODUCT_PACKAGES += \
-	fibmap.f2fs \
-	fsck.f2fs \
-	mkfs.f2fs
-
 # Wi-Fi
 PRODUCT_PACKAGES += \
     macloader \
