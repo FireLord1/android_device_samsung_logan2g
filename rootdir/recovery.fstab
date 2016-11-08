@@ -5,7 +5,9 @@
 #<src>                                        <mnt_point>       <type>  <mnt_flags and options>                 					<fs_mgr_flags>
 /dev/block/mmcblk0p9    /system           ext4    ro                                                                                wait
 /dev/block/mmcblk0p3    /efs              ext4    noatime,nosuid,nodev,discard,journal_async_commit,errors=panic                    wait,check
+/dev/block/mmcblk0p8    /cache            ext4    noatime,nosuid,nodev,discard,journal_async_commit,errors=panic     		    wait,check
 /dev/block/mmcblk0p8    /cache            f2fs    noatime,discard,inline_xattr,inline_data,nosuid,nodev     		    	    wait,check
+/dev/block/mmcblk0p12   /data             ext4    noatime,nosuid,nodev,noauto_da_alloc,discard,journal_async_commit,errors=panic    wait,check,encryptable=footer,length=-16384
 /dev/block/mmcblk0p12   /data             f2fs	  noatime,discard,inline_xattr,inline_data,nosuid,nodev				    wait,check,encryptable=footer
 /dev/block/mmcblk0p5    /boot             emmc    defaults                                					    defaults
 /dev/block/mmcblk0p6    /recovery         emmc    defaults                                					    defaults
