@@ -49,16 +49,16 @@ import java.util.Collections;
 import com.android.internal.telephony.uicc.IccCardApplicationStatus;
 import com.android.internal.telephony.uicc.IccCardStatus;
 
-public class SamsungMint2GRIL extends SamsungSPRDRIL implements CommandsInterface {
+public class SamsungLogan2GRIL extends SamsungSPRDRIL implements CommandsInterface {
 
 
-    public SamsungMint2GRIL(Context context, int preferredNetworkType,
+    public SamsungLogan2GRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
         mQANElements = SystemProperties.getInt("ro.ril.telephony.mqanelements", 4);
     }
 
-    public SamsungMint2GRIL(Context context, int networkMode,
+    public SamsungLogan2GRIL(Context context, int networkMode,
             int cdmaSubscription) {
         super(context, networkMode, cdmaSubscription);
         mQANElements = SystemProperties.getInt("ro.ril.telephony.mqanelements", 4);
