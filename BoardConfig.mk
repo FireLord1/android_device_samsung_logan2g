@@ -71,7 +71,7 @@ BOARD_RIL_CLASS := ../../../device/samsung/logan2g/ril
 COMMON_GLOBAL_CFLAGS += -DSEC_PRODUCT_FEATURE_RIL_CALL_DUALMODE_CDMAGSM
 
 # healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd-logan2g
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.logan2g
 
 # CMHW
 BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/logan2g/cmhw/
