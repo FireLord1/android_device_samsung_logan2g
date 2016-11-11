@@ -110,6 +110,9 @@ public class SamsungLogan2GRIL extends SamsungSPRDRIL implements CommandsInterfa
                         new AsyncResult (null, resp, null));
                 }
             break;
+            case 11008: // RIL_UNSOL_DEVICE_READY_NOTI
+                ret = responseVoid(p); // Currently we'll bypass logcat for this first
+                break;
             // SAMSUNG STATES
             case 11010: // RIL_UNSOL_AM:
                 ret = responseString(p);
