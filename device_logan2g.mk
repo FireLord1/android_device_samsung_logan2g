@@ -107,9 +107,6 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    wifi.supplicant_scan_interval=180
-
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
@@ -139,43 +136,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger \
     charger_res_images
-
-# Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.opengles.version=131072
-
-# Properties
-# Default properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
-
-# Google-specific location properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.locationfeatures=1 \
-    ro.com.google.networklocation=1
-
-# Device props
-PRODUCT_PROPERTY_OVERRIDES := \
-	keyguard.no_require_sim=true \
-	ro.com.android.dataroaming=false \
-	persist.sys.sprd.modemreset=0
-
-# The extended JNI checks will cause the system to run more slowly, but they can spot a variety of nasty bugs before they
-# have a chance to cause problems.
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.kernel.android.checkjni=0 \
-    dalvik.vm.checkjni=false \
-    dalvik.vm.heapstartsize=5m \
-    dalvik.vm.heapgrowthlimit=96m \
-    dalvik.vm.heapsize=128m \
-    wifi.interface=wlan0 \
-    mobiledata.interfaces=rmnet0 \
-    ro.zygote.disable_gl_preload=true \
-    persist.radio.multisim.config=dsds \
-    ro.telephony.ril_class=SamsungLogan2GRIL \
-    ro.ril.telephony.mqanelements=5 \
-    ro.multisim.simslotcount=2 \
-    ro.telephony.call_ring.multiple=0 \
-    ro.telephony.call_ring=0 \
-    ro.crypto.state=unsupported \
-    ro.com.google.gmsversion=4.1_r6 \

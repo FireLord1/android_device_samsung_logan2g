@@ -1,20 +1,34 @@
 #
 # system.prop for logan2g
 #
+# adb
+ro.secure=0
+ro.adb.secure=0
+service.adb.root=1
+ro.allow.mock.location=1
+ro.debuggable=1
+
+# Dalvik/Art
+ro.kernel.android.checkjni=0
+dalvik.vm.checkjni=false
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=96m
+dalvik.vm.heapsize=128m
+ro.zygote.disable_gl_preload=true
+ro.crypto.state=unsupported
+
+# Google location
+ro.com.google.locationfeatures=1
+ro.com.google.networklocation=1
+
+# GPU
 ro.sf.lcd_density=240
 ro.sf.lcd_width = 52
 ro.sf.lcd_height = 87
 ro.opengles.version=131072
 ro.product.hardware=logan
 ro.lcd_brightness=160
-
 debug.hwui.render_dirty_regions=false
-
-# delay for ConnectivityChange broadcast (ms)
-conn.connectivity_change_delay = 0
-
-# NK console device
-persist.ttydev=ttyVUART0
 
 # MultiTouch support
 ro.product.multi_touch_enabled=true
@@ -24,9 +38,24 @@ ro.product.max_num_touch=2
 ril.sim2.present=1
 ro.ril.hsxpa=1
 persist.msms.phone_count=2
+keyguard.no_require_sim=true
+ro.com.android.dataroaming=false
+persist.sys.sprd.modemreset=0
+mobiledata.interfaces=rmnet0
+ro.telephony.ril_class=SamsungLogan2GRIL
+ro.ril.telephony.mqanelements=5
+ro.multisim.simslotcount=2
+ro.telephony.call_ring.multiple=0
+ro.telephony.call_ring=0
+# NK console device
+persist.ttydev=ttyVUART0
+persist.radio.multisim.config=dsds
+# delay for ConnectivityChange broadcast (ms)
+conn.connectivity_change_delay = 0
 
-ro.secure=0
-ro.adb.secure=0
-service.adb.root=1
-ro.allow.mock.location=1
-ro.debuggable=1
+# usb
+persist.sys.usb.config=mtp
+
+# WiFi
+wifi.supplicant_scan_interval=180
+wifi.interface=wlan0
