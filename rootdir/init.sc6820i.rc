@@ -111,21 +111,14 @@ on boot
     # TelephonyManager.java requires this
     chmod 0644 /proc/cmdline
 
-#AND3_SPRD
-# SEC_PRODUCT_FEATURE_COMMON_USE_MULTISIM
-#   simslot 1
-#   setprop ro.multisim.simslotcount 1  
-#   simslot 2
-    setprop ro.multisim.simslotcount 2
-#   simslot 3
-#   setprop ro.multisim.simslotcount 3
 #Sensor permission
     chown system system /dev/i2c-2
     chmod 664 /dev/i2c-2
     chown system system /sys/class/input/input0/enable
     chown system system /sys/class/input/input0/poll_delay
     chmod 0660 /sys/class/input/input0/enable
-    chmod 0660 /sys/class/input/input0/poll_delay    
+    chmod 0660 /sys/class/input/input0/poll_delay
+ 
 # Accelerometer_sensor
     chown system radio /dev/accelerometer
     chown system radio /sys/class/sensors/accelerometer_sensor
@@ -135,6 +128,7 @@ on boot
     chown system radio /sys/class/sensors/accelerometer_sensor/reactive_alert
     chown system radio /sys/class/sensors/accelerometer_sensor/vendor
     chown system radio /sys/class/sensors/accelerometer_sensor/name
+
 #permissions for bluetooth
 chown bluetooth net_bt_stack  /dev/ttyS0
     chmod 666 /dev/ttyS0
@@ -146,6 +140,7 @@ chown bluetooth net_bt_stack  /dev/ttyS0
     chown bluetooth system /proc/bluetooth/sleep/proto
     setprop ro.bt.bdaddr_path "/efs/bluetooth/bt_addr"
     chown bluetooth bluetooth ro.bt.bdaddr_path
+
 # Root Permission
     chmod 660 /proc/nk/resume
     chmod 660 /proc/nk/restart
@@ -156,9 +151,6 @@ chown bluetooth net_bt_stack  /dev/ttyS0
     chown system root /proc/nk/guest-02/dsp_bank
     chown system root /proc/nk/guest-02/guestOS_2_bank
     chown system system /sys/class/power_supply/*
-
-# Ril
-    chmod 0644 /proc/cmdline
 
 # Accelerometer_sensor
     chown system radio /dev/accelerometer
@@ -264,6 +256,7 @@ chown bluetooth net_bt_stack  /dev/ttyS0
     chown radio system /sys/class/secgpio_check/secgpio_check_all/gpiosleep_check
     chown radio system /sys/class/secgpio_check/secgpio_check_all/secgpio_ctrl
     chown radio system /sys/class/secgpio_check/secgpio_check_all/checked_sleepGPIO
+
 #start rawdata daemon.
 #service rawdatad /bin/rawdatad
 #    class core
@@ -407,24 +400,9 @@ service ril-daemon2 /system/bin/rild_sp  -l /system/lib/libreference-ril.so -- -
     socket rild-debug1 stream 660 radio system
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r
-#service ril-daemon /system/bin/rild
-#    #class main
-#    class core
-#    socket rild stream 660 root radio
-#    socket rild-debug stream 660 radio system
-#    user root
-#    group radio cache inet misc audio sdcard_r sdcard_rw log
+
 on property:persist.msms.phone_count=2
     start ril-daemon2
-#service bootsound /system/bin/mplayer /system/media/bootsound
-#    user media
-#    group audio
-#    oneshot
-#service startupsound /system/bin/mplayer /system/media/startupsound
-#    user media
-#    group audio
-#    disabled
-#    oneshot
 
 # create virtual SD card at /mnt/sdcard, based on the /data/media directory
 # daemon will drop to user/group system/media_rw after initializing
