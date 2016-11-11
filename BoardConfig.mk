@@ -78,6 +78,7 @@ BOARD_HARDWARE_CLASS := hardware/samsung/cmhw/ device/samsung/logan2g/cmhw/
 
 # Camera
 USE_CAMERA_STUB := true 
+COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB
 
 # Audio
 BOARD_USES_TINYALSA_AUDIO := true
