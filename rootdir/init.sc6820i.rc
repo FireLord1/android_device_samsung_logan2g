@@ -407,7 +407,6 @@ service ril-daemon2 /system/bin/rild_sp  -l /system/lib/libreference-ril.so -- -
     socket rild-debug1 stream 660 radio system
     user root
     group radio cache inet misc audio sdcard_rw log sdcard_r
-    disabled
 #service ril-daemon /system/bin/rild
 #    #class main
 #    class core
