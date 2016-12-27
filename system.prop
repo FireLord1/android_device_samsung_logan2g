@@ -44,6 +44,14 @@ rild.libargs=-d /dev/ttyS0
 ro.ril.ecclist=112,911,#911,*911
 gsm.current.phone-type=1
 ro.com.android.dataroaming=false
+ro.telephony.ril_class=SamsungLogan2GRIL 
+ro.ril.telephony.mqanelements=5 
+ro.telephony.call_ring=0
+persist.msms.phone_count=2 
+persist.radio.multisim.config=dsds 
+ro.telephony.call_ring.multiple=0
+keyguard.no_require_sim=true
+persist.sys.sprd.modemreset=0
 # NK console device
 persist.ttydev=ttyVUART0
 persist.radio.multisim.config=dsds
