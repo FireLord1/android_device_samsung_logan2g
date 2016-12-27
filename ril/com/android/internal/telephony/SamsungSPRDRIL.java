@@ -27,7 +27,6 @@ import android.telephony.Rlog;
 import com.android.internal.telephony.RILConstants;
 import java.util.Collections;
 import android.telephony.PhoneNumberUtils;
-import android.telephony.TelephonyManager;
 
 import java.util.ArrayList;
 
@@ -44,7 +43,7 @@ public class SamsungSPRDRIL extends RIL implements CommandsInterface {
     public SamsungSPRDRIL(Context context, int networkMode,
             int cdmaSubscription, Integer instanceId) {
         super(context, networkMode, cdmaSubscription, instanceId);
-        mQANElements = 5;
+        mQANElements = 6;
     }
 
     public void
@@ -326,3 +325,4 @@ public class SamsungSPRDRIL extends RIL implements CommandsInterface {
         return rr;
     }
 }
+

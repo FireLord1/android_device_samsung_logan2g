@@ -36,17 +36,14 @@ ro.product.max_num_touch=2
 
 # RIL
 ril.sim2.present=1
+persist.radio.multisim.config=dsds
 ro.ril.hsxpa=1
 persist.msms.phone_count=2
-keyguard.no_require_sim=true
+rild.libpath=/system/lib/libsec-ril.so
+rild.libargs=-d /dev/ttyS0
+ro.ril.ecclist=112,911,#911,*911
+gsm.current.phone-type=1
 ro.com.android.dataroaming=false
-persist.sys.sprd.modemreset=0
-mobiledata.interfaces=rmnet0
-ro.telephony.ril_class=SamsungLogan2GRIL
-ro.ril.telephony.mqanelements=5
-ro.multisim.simslotcount=2
-ro.telephony.call_ring.multiple=0
-ro.telephony.call_ring=0
 # NK console device
 persist.ttydev=ttyVUART0
 persist.radio.multisim.config=dsds
@@ -59,3 +56,7 @@ persist.sys.usb.config=mtp
 # WiFi
 wifi.supplicant_scan_interval=180
 wifi.interface=wlan0
+
+# Camera
+camera2.portability.force_api=1
+camera.disable_zsl_mode=1
